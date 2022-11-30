@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+<div class="register" style="position:relative; bottom:-20px;left:580px; color:blue">
+<h1>Registration Form</h1></div>
+<div class="container my-5">
+<form class="row g-3" method="post" action="/register">
+    {% csrf_token %}
+  <div class="col-md-6">
+    <label for="email" class="form-label" style="position:relative; bottom:-9px;">Email</label>
+    <input type="email" class="form-control" name="email" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="password" class="form-label" style="position:relative; bottom:-9px;">Password</label>
+    <input type="password" class="form-control" name="password" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="address" class="form-label" style="position:relative; bottom:-9px;">Address</label>
+    <input type="text" class="form-control" id="inputAddress" name="address" placeholder="Address 1....">
+  </div>
+  <div class="col-12">
+    <label for="address2" class="form-label"style="position:relative; bottom:-9px;">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" name="address2" placeholder="Address 2.....">
+  </div>
+  <div class="col-md-6">
+    <label for="city" class="form-label" style="position:relative; bottom:-9px;">City</label>
+    <input type="text" class="form-control" name="city" for="city" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="state" class="form-label" style="position:relative; bottom:-40px">State</label>
+    <select id="inputState" name="state" class="form-select"style="position:relative; bottom:-40px;left:20px; width:70%">
+      <option selected>Choose...</option>
+      <option>Chandigarh</option>
+      <option>Punjab</option>
+      <option>Haryana</option>
+      <option>Himachal</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="zip" class="form-label" style="position:relative; bottom:-9px;">Zip</label>
+    <input type="text" class="form-control" name="zip" id="inputZip">
+  </div>
+  <div class="col-12 my-4">
+    <button type="submit" class="btn btn-primary" style="position:relative; bottom:-40px;">Sign in</button>
+  </div>
+</form>
+  </div>
+{% endblock body %}
